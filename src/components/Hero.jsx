@@ -31,7 +31,7 @@ export default function Hero({ onLogoVisibilityChange }) {
             para seu negócio
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-xl">
-            Desenvolvemos sites, aplicações e soluções tecnológicas sob medida para impulsionar sua empresa no mundo digital.
+            Sites, aplicações e soluções tecnológicas sob medida para impulsionar sua empresa no mundo digital.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
