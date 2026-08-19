@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getWhatsAppUrl } from '../data/contact'
 
 export default function Header({ showLogo }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +36,9 @@ export default function Header({ showLogo }) {
             </a>
           ))}
           <a
-            href="#contact"
+            href={getWhatsAppUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 text-sm font-semibold text-ok-dark bg-ok-cyan rounded-full hover:bg-white hover:shadow-[0_0_24px_rgba(0,217,255,0.5)] transition-all duration-300"
           >
             Fale Conosco
