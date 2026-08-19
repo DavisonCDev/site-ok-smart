@@ -16,7 +16,7 @@ export default function Header({ showLogo }) {
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-3 group h-10">
           <img
-            src="/logo.png"
+            src="logo.png"
             alt="OK Smart"
             className={`h-10 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,217,255,0.5)] group-hover:scale-105 transition-all duration-500 ease-out ${
               showLogo ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'

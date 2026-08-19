@@ -52,7 +52,7 @@ export default function Hero({ onLogoVisibilityChange }) {
           <div className="absolute w-80 h-80 bg-ok-cyan/20 rounded-full blur-3xl animate-glow-pulse" />
           <img
             ref={logoRef}
-            src="/logo.png"
+            src="logo.png"
             alt="OK Smart"
             className="relative w-full max-w-md drop-shadow-[0_0_40px_rgba(0,217,255,0.4)]"
           />
