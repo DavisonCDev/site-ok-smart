@@ -1,33 +1,56 @@
-import { getWhatsAppUrl } from '../data/contact'
+import { getWhatsAppUrl, INSTAGRAM_URL } from '../data/contact'
 
 export default function Footer() {
   const whatsappUrl = getWhatsAppUrl()
 
   return (
-    <footer id="contact" className="py-16 px-6 bg-ok-dark border-t border-white/10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <footer id="contact" className="relative py-16 px-6 bg-ok-navy border-t border-white/5 overflow-hidden">
+      <div className="absolute -top-24 right-1/4 w-[380px] h-[380px] bg-ok-blue/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative">
         <div>
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="font-display text-3xl font-bold mb-4">
             Vamos construir algo <span className="text-ok-cyan">incrível</span>?
           </h2>
           <p className="text-gray-400 mb-6">
             Entre em contato pelo WhatsApp e transforme sua presença digital com a OK Smart.
           </p>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-7 py-3.5 font-semibold text-ok-dark bg-ok-cyan rounded-full hover:bg-white hover:shadow-[0_0_32px_rgba(0,217,255,0.6)] hover:-translate-y-1 transition-all duration-300"
-          >
-            <WhatsAppIcon className="w-5 h-5" />
-            Falar no WhatsApp
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-7 py-3.5 font-semibold text-ok-dark bg-ok-cyan rounded-full hover:bg-white hover:shadow-[0_0_32px_rgba(0,212,255,0.6)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <WhatsAppIcon className="w-5 h-5" />
+              Falar no WhatsApp
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da OK Smart"
+              className="inline-flex items-center gap-3 px-7 py-3.5 font-semibold text-white border border-white/20 rounded-full hover:border-ok-cyan hover:text-ok-cyan hover:-translate-y-1 transition-all duration-300"
+            >
+              <InstagramIcon className="w-5 h-5" />
+              Instagram
+            </a>
+          </div>
         </div>
         <div className="text-center md:text-right text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} OK Smart. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
+  )
+}
+
+function InstagramIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
   )
 }
 

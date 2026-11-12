@@ -7,18 +7,18 @@ export default function Header({ showLogo }) {
   const links = [
     { label: 'Início', href: '#hero' },
     { label: 'Serviços', href: '#services' },
-    { label: 'Sobre', href: '#about' },
+    { label: 'Portfólio', href: '#portfolio' },
     { label: 'Contato', href: '#contact' },
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-ok-dark/80 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-ok-dark/70 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-3 group h-10">
           <img
             src="logo.png"
             alt="OK Smart"
-            className={`h-10 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,217,255,0.5)] group-hover:scale-105 transition-all duration-500 ease-out ${
+            className={`h-10 w-auto object-contain group-hover:scale-105 transition-all duration-500 ease-out ${
               showLogo ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}
           />
@@ -39,7 +39,7 @@ export default function Header({ showLogo }) {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 text-sm font-semibold text-ok-dark bg-ok-cyan rounded-full hover:bg-white hover:shadow-[0_0_24px_rgba(0,217,255,0.5)] transition-all duration-300"
+            className="px-5 py-2.5 text-sm font-semibold text-ok-dark bg-ok-cyan rounded-full hover:bg-white hover:shadow-[0_0_24px_rgba(0,212,255,0.5)] transition-all duration-300"
           >
             Fale Conosco
           </a>
@@ -55,7 +55,7 @@ export default function Header({ showLogo }) {
       </nav>
 
       {isOpen && (
-        <div className="md:hidden bg-ok-gray border-t border-white/10 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-ok-navy border-t border-white/5 px-6 py-4 space-y-3">
           {links.map((link) => (
             <a
               key={link.label}

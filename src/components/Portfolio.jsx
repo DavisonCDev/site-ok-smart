@@ -15,9 +15,10 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-6 bg-ok-dark">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+    <section id="portfolio" className="relative py-24 px-6 bg-ok-dark overflow-hidden">
+      <div className="absolute -bottom-32 -left-32 w-[420px] h-[420px] bg-ok-purple/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4">
           Nosso <span className="text-ok-cyan">portfólio</span>
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
@@ -28,7 +29,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="group rounded-2xl overflow-hidden bg-ok-gray border border-white/10 hover:border-ok-cyan/50 hover:shadow-[0_0_40px_rgba(0,217,255,0.12)] hover:-translate-y-2 transition-all duration-500"
+              className="group rounded-2xl overflow-hidden bg-ok-gray border border-white/10 hover:border-ok-cyan/50 hover:shadow-[0_0_40px_rgba(0,140,255,0.15)] hover:-translate-y-2 transition-all duration-500"
             >
               <div className="flex items-center gap-3 px-4 py-3 bg-ok-dark border-b border-white/10">
                 <div className="flex gap-1.5">
