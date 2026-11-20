@@ -11,6 +11,12 @@ const projects = [
     description: 'Site de Personal Organizer com mostruário de trabalhos realizados, apresentação de serviços e canal para orçamentos e agendamentos.',
     tags: ['Personal Organizer', 'Mostruário', 'Serviços'],
   },
+  {
+    name: 'Machado Viagens',
+    url: 'https://www.machadoviagens.com.br',
+    description: 'Site de agência de viagens com apresentação de destinos, roteiros personalizados e canal direto para orçamentos.',
+    tags: ['Agência de Viagens', 'Roteiros', 'Orçamentos'],
+  },
 ]
 
 export default function Portfolio() {
@@ -25,7 +31,7 @@ export default function Portfolio() {
           Clique para visitar ou navegue pelas prévias ao vivo dos projetos entregues.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.name}
