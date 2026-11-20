@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/site-ok-smart/',
+  base: process.env.VERCEL ? '/' : '/site-ok-smart/',
   plugins: [react()],
 })
