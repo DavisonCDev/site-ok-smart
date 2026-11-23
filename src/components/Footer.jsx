@@ -38,6 +38,7 @@ export default function Footer() {
         </div>
         <div className="text-center md:text-right text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} OK Smart. Todos os direitos reservados.</p>
+          <p className="mt-2 text-xs text-gray-600">Developed by OK Smart &middot; Desde 2026</p>
         </div>
       </div>
     </footer>
