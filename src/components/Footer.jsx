@@ -1,5 +1,10 @@
 import { getWhatsAppUrl, INSTAGRAM_URL } from '../data/contact'
 
+const foundingYear = 2026
+const currentYear = new Date().getFullYear()
+const siteYears =
+  currentYear > foundingYear ? `${foundingYear} - ${currentYear}` : `${foundingYear}`
+
 export default function Footer() {
   const whatsappUrl = getWhatsAppUrl()
 
@@ -37,8 +42,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center md:text-right text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} OK Smart. Todos os direitos reservados.</p>
-          <p className="mt-2 text-xs text-gray-600">Developed by OK Smart &middot; Desde 2026</p>
+          <p>&copy; {siteYears} OK Smart. Todos os direitos reservados.</p>
+          <p className="mt-2 text-xs text-gray-600">Developed by OK Smart</p>
         </div>
       </div>
     </footer>
